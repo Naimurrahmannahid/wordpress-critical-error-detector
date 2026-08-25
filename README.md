@@ -8,6 +8,10 @@ A lightweight, highly efficient **WordPress Must-Use Plugin (MU-Plugin)** design
 
 ---
 
+<p align="center">
+  <img src="images.jpeg" alt="WordPress Critical Error">
+</p>
+
 ## 🇬🇧 English Documentation
 
 ### 📌 Prerequisites & Environment Checklist
