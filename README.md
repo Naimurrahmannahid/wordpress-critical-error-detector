@@ -1,10 +1,10 @@
 # WordPress Critical Error Detector (MU-Plugin) 🐛
 
 [![Platform](https://img.shields.io/badge/Platform-WordPress-blue.svg)](https://wordpress.org/)
-[![PHP](https://img.shields.io/badge/PHP-7.4%20%7C%208.0%20%7C%208.1%20%7C%208.2-8892BF.svg)](https://php.net/)
+[![PHP](https://img.shields.io/badge/PHP-7.4%20%7C%208.0%20%7C%208.1%20%7C%208.2%20%7C%208.3-8892BF.svg)](https://php.net/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A lightweight, highly efficient **WordPress Must-Use Plugin (MU-Plugin)** designed to automatically detect PHP fatal errors, plugin conflicts (like Elementor crashes), and strict type errors. It instantly sends a detailed debug report directly to the site administrator's email.
+A lightweight, highly efficient **WordPress Must-Use Plugin (MU-Plugin)** designed to automatically detect PHP fatal errors, plugin conflicts (like Elementor crashes), and strict type errors. It instantly sends a detailed debug report directly to the site administrator's email. Fully compatible with PHP 8.3.
 
 ---
 
@@ -30,6 +30,7 @@ Unlike standard plugins, Must-Use (MU) plugins are activated automatically and c
 * Identifies the exact file path and line number causing the conflict.
 * Dynamically fetches the WordPress admin email to send the report.
 * Zero database bloat and zero impact on website loading speed.
+* Tested and fully compatible with the latest PHP 8.3 strict typing rules.
 
 ---
 
@@ -45,7 +46,7 @@ Unlike standard plugins, Must-Use (MU) plugins are activated automatically and c
 
 ১. আপনার হোস্টিংয়ের ফাইল ম্যানেজার (cPanel/hPanel) বা FTP দিয়ে ওয়েবসাইটে লগইন করুন।
 ২. `wp-content` ফোল্ডারের ভেতরে প্রবেশ করুন।
-৩. সেখানে `mu-plugins` নামের কোনো ফোল্ডার আছে কি না চেক করুন। না থাকলে নতুন করে ঠিক এই বানানে একটি ফোল্ডার তৈরি করুন: `mu-plugins` (শেষে 's' দিতে ভুলবেন না)।
+৩. সেখানে `mu-plugins` নামের কোনো ফোল্ডার আছে কি পণ্ডিত না চেক করুন। না থাকলে নতুন করে ঠিক এই বানানে একটি ফোল্ডার তৈরি করুন: `mu-plugins` (শেষে 's' দিতে ভুলবেন না)।
 ৪. এবার সেই ফোল্ডারের ভেতর নতুন একটি PHP ফাইল তৈরি করুন এবং নাম দিন: `wordpress-critical-error-detector.php` (পাথ: `wp-content/mu-plugins/wordpress-critical-error-detector.php`)।
 ৫. এই রিপোজিটরির কোডগুলো কপি করে সেই ফাইলে পেস্ট করে সেভ করুন। 
 ৬. **কাজ শেষ!** এখন থেকে ওয়েবসাইটে কোনো প্লাগিন কনফ্লিক্ট বা ফ্যাটাল এরর (যেমন: Elementor ক্র্যাশ) হলে সাথে সাথে অ্যাডমিন ইমেইলে রিপোর্ট চলে আসবে।
@@ -54,3 +55,4 @@ Unlike standard plugins, Must-Use (MU) plugins are activated automatically and c
 * ওয়েবসাইটের ফ্যাটাল এরর এবং হোয়াইট স্ক্রিন অফ ডেথ (WSoD) স্বয়ংক্রিয়ভাবে ডিটেক্ট করে।
 * ঠিক কোন প্লাগিনের বা থিমের কোন ফাইলের কত নম্বর লাইনে সমস্যা, তা ইমেইলে জানিয়ে দেয়।
 * ওয়েবসাইটের স্পিড বা পারফরম্যান্সে কোনো ক্ষতিকর প্রভাব ফেলে না।
+* লেটেস্ট PHP 8.3 এর স্ট্রিক্ট টাইপিং রুলসের সাথে পুরোপুরি সামঞ্জস্যপূর্ণ।
