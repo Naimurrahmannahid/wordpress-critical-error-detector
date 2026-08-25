@@ -15,6 +15,12 @@ Before installing this MU-Plugin, ensure your WordPress environment meets the fo
 - [x] **Active SMTP Setup:** The plugin uses the default `wp_mail()` function to send error reports. Your server must have a working email configuration.
 - [x] **Recommended SMTP Plugin:** We highly recommend using **[FluentSMTP](https://wordpress.org/plugins/fluent-smtp/)** for a secure and reliable email delivery system. Without a proper SMTP configuration, the fatal error emails might end up in the spam folder or not send at all.
 
+### ⚙️ How to Receive Email Notifications as a Developer. 
+1. If you want to receive reports on a custom email address, you have to replace code on line 24.
+2. Replace this code: `$to = get_option( 'admin_email' );` with `$to = 'freelancernahid2463@gmail.com';`
+3. Finally, ensure that at the bottom of the file,  `wp_mail( $to, $subject, $message );` is activated for email notification.
+
+
 ### 🛠️ Installation Guide
 Unlike standard plugins, Must-Use (MU) plugins are activated automatically and cannot be disabled from the WordPress admin dashboard.
 
@@ -40,6 +46,11 @@ Unlike standard plugins, Must-Use (MU) plugins are activated automatically and c
 এই প্লাগিনটি ব্যবহার করার আগে আপনার ওয়ার্ডপ্রেস ওয়েবসাইটে নিচের বিষয়গুলো নিশ্চিত করুন:
 - [x] **অ্যাক্টিভ SMTP সেটআপ:** প্লাগিনটি এরর রিপোর্ট পাঠানোর জন্য ওয়ার্ডপ্রেসের ডিফল্ট `wp_mail()` ফাংশন ব্যবহার করে। তাই আপনার ওয়েবসাইটে ইমেইল আদান-প্রদান সিস্টেম চালু থাকতে হবে।
 - [x] **সুপারিশকৃত SMTP প্লাগিন:** ইমেইল ডেলিভারি নিশ্চিত করতে আমরা **[FluentSMTP](https://wordpress.org/plugins/fluent-smtp/)** প্লাগিনটি ব্যবহার করার রেকমেন্ড করছি। সঠিক এসটিএমপি (SMTP) কনফিগারেশন না থাকলে ফ্যাটাল এররের ইমেইলগুলো স্প্যাম ফোল্ডারে যেতে পারে অথবা ডেলিভারি ফেইল হতে পারে।
+
+### ⚙️ একজন ডেভেলপার হিসেবে কীভাবে ইমেল নোটিফিকেশন পাবেন।
+১. আপনি যদি কাস্টম ইমেইল অ্যাড্রেসে রিপোর্ট পেতে চান, তবে কোডের ২৪ নম্বর লাইনটি পরিবর্তন করতে হবে।
+২. `$to = get_option( 'admin_email' );` কোডটি মুছে দিয়ে তার জায়গায় `$to = 'freelancernahid2463@gmail.com';` বসিয়ে দিন।
+৩. সবশেষে, নিশ্চিত করুন যে ফাইলের শেষে, ইমেল নোটিফিকেশনের জন্য `wp_mail( $to, $subject, $message );` সক্রিয় করা আছে।
 
 ### 🛠️ ইন্সটলেশন গাইড (কীভাবে যুক্ত করবেন)
 সাধারণ প্লাগিনের মতো এটি ড্যাশবোর্ড থেকে আপলোড করা যায় না। Must-Use (MU) প্লাগিনগুলো স্বয়ংক্রিয়ভাবে রান হয়। এটি সেটআপ করার নিয়ম:
